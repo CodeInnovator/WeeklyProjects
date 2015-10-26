@@ -8,4 +8,4 @@
 ---------
 
 1. **FunFact App :** - First Android Application.[FunFact](AndroidStudioProjects/FunFact)(Last Updated: Oct.15).
-2. **Weather App :** - Using OKHttp and forecast.io API to build a simple weather application.[Weather](AndroidStudioProjects/Weather)(Last Updated: Oct.20.2015).
+2. **Weather App :** - Using OKHttp and forecast.io API to build a simple weather application.reference:TeamTreeHouseTutorial[Weather](AndroidStudioProjects/Weather)(Oct.19.2015~Oct.25.2015).
