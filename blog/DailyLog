@@ -1,0 +1,13 @@
+Oct. 27. 2015
+	 1. Created a Rails Application:
+	 	Terminal Command: 
+	 		rails new Depot
+	 2. Created the database using Scaffold. 
+	 	It will generate both Data Table,a Model and a controller.  
+	 	I'm using SQLite3. 
+	 	Terminal Command: 
+	 		rails generate scaffold post title:string text:text
+	 		
+	 		rails generate model comment post_id:integer text:text
+
+	 		rails db:migrate
