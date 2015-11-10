@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
   	@post = Post.find(params[:post_id])
-  	@comment = @post.comments.build(params[:comment].permit)
+  	@comment = @post.comments.new(post_params)
   	@comment.save
 
   	redirect_to @post
@@ -9,4 +9,10 @@ class CommentsController < ApplicationController
 
   def destroy
   end
+
+  private
+  	def post_params
+  		params.require(:comment).permit(:text)
+  	end
+  	
 end
