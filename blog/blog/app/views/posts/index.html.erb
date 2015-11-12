@@ -1,11 +1,8 @@
+<h1>This is the index.html.erb file... </h1>
 
-<h1> Hello, welcome to Thomas Kim's pesonal Blog<h1>
 <% @posts.each do |post| %>
-<h2> <%= link_to post.title , post_path(post)%></h2>
-<p>
-<%= truncate post.text %>
-</p>
-  <% end %>
-<p>
-  <%= link_to "New post", new_post_path %>
-  </p> 
+<div class="post_wrapper">
+	<h2 class="title"><%= link_to post.title, post %></h2>
+	<p class="date"><%= post.created_at.strftime("%B, %D, %Y") %></p>
+	</div>
+	<% end %>
