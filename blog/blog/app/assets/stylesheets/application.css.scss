@@ -21,7 +21,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
+	font-weight: 700;
 }
 
 a {
@@ -104,16 +104,30 @@ a {
 }
 
 #main_content {
-	margin-left: 250px;
 	#header {
-		padding: 1em 3em;
+	#logo {
+		float: right;
+		right: 3em;
+		top: 3em;
+		}
+		position:relative;
+		z-index: 1;
+		font-size: 25px;
+		padding: 0.5em 1em;
 		border-bottom: 1px solid #d6dce0;
 		background: #f5f7f9;
 		color: #9eafba;
+		width:100%;
+		#admin_log {
+		padding: 0.5em 0.5em;
+		font-size: 10px;
+		}
 		p {
 			display: inline;
 		}
 		a {
+			padding:3px 1px 3px 3px;
+  			border-bottom:none;
 			color: #9eafba;
 			text-decoration: none;
 		}
@@ -125,6 +139,7 @@ a {
 				margin-left: .5em;
 			}
 		}
+		
 	}
 	.post_wrapper {
 		padding: 3em;

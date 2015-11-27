@@ -8,47 +8,44 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="sidebar">
+  <div id="main_content">
+  <div id="header">
     <div id="logo">
       <%= link_to root_path do %>
       <%= image_tag "logo.jpg" %>
       <% end %>
     </div>
-
-    <ul>
-     <li class="category">Website</li>
-     <li><%= link_to "blog", root_path %></li>
-     <li><%= link_to "about", about_index_path %></li>
-   </ul> 
-   <ul>
-     <li class="category">Social Media</li>
-     <li>Email</li>
-     <li>Twitter</li>
-     <li>Instagrams</li>
-     <li><%= link_to "Github", "https://github.com/CodeInnovator"%></li>
-   </ul>
+ 
+     <a><%= link_to "blog", root_path %></a>
+     <a><%= link_to "about", about_index_path %></a>
+     <a>Email</a>
+     <a>Twitter</a>
+     <a>Instagrams</a>
+     <a><%= link_to "Github", "https://github.com/CodeInnovator"%></a>
 
   <% if !user_signed_in? %>
+  <div id="admin_log">
    <p class="sign_in"><%= link_to "Admin Log In", new_user_session_path %></p>
+   </div>
    <% end %>
- </div>
+</div>
 
- <div id="main_content">
-  <div id="header">
-  	<% if current_page?(root_path) %>
-    <p>All Posts</p>
+<% if current_page?(root_path) %>
+    <h1 style="color:brown">All Posts</h1>
     <% elsif current_page?(about_index_path) %>
     <p>About</p>
     <% else %>
     <%= link_to "Back to All Posts", root_path %>
     <% end %>
-  		<% if user_signed_in? %>
+      <% if user_signed_in? %>
     <div class="buttons">
     <button class="button"><%= link_to "New Post", new_post_path %></button>
     <button class="button"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
     </div>
     <% end %>
-  	</div>
+ </div>
+
+
   <% flash.each do |name, msg| %>
   <%= content_tag(:div, msg, class: "alert") %>
   <% end %>
